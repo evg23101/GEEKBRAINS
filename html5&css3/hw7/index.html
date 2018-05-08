@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="ask">
+            <a class="answer" href="#">Вопросы и ответы</a>
+            <a  class="reviews" href="#">Отзывы</a>
+        </div>
+        <div class="social_icon">
+            <a href="https://ru-ru.facebook.com" class="social_item fb"></a>
+            <a href="https://vk.com" class="social_item vk"></a>
+            <a href="https://twitter.com" class="social_item tw"></a>
+        </div>
+    </header>
+    <div class="logo">
+        <a href="#">Мастерская серебра</a>
+    </div>
+    <div class="contact" itemscope itemtype="http://schema.org/Organization">
+        <i class="fa fa-phone"></i><span itemprop="phone">7 (929) 615-55-98</span>
+        <i class="fa fa-envelope-o"></i><span itemprop="email">info@evamax.ru</span>
+        <form method="post" class="search">
+            <input class="mail" type="email" name="email">
+            <input class="submit" type="submit" value="">
+        </form>
+    </div>
+    <nav>
+        <a href="#">ГЛАВНАЯ</a>
+        <a href="#">ОПЛАТА</a>
+        <a href="#">ДОСТАВКА</a>
+        <a href="#">КАК КУПИТЬ</a>
+        <a href="#">НОВОСТИ</a>
+        <a href="#">КОНТАКТЫ</a>
+        <div class="basket">
+            <p>корзина (0)</p>
+        </div>
+    </nav>
+
+    <ul class="breadcrumbs">
+        <li class="main_link"><a href="#">ГЛАВНАЯ</a></li>
+        <li><a href="#">Интернет-магазин</a></li>
+    </ul>
+
+    <!-- Карусель -->
+    <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+        <!-- Индикаторы для карусели -->
+        <ol class="carousel-indicators">
+            <!-- Перейти к 0 слайду карусели с помощью соответствующего индекса data-slide-to="0" -->
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <!-- Перейти к 1 слайду карусели с помощью соответствующего индекса data-slide-to="1" -->
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <!-- Перейти к 2 слайду карусели с помощью соответствующего индекса data-slide-to="2" -->
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Слайды карусели -->
+        <div class="carousel-inner">
+            <!-- Слайды создаются с помощью контейнера с классом item, внутри которого помещается содержимое слайда -->
+            <div class="active item"></div>
+            <!-- Слайд №2 -->
+            <div class="item"></div>
+            <!-- Слайд №3 -->
+            <div class="item"></div>
+        </div>
+        <!-- Навигация для карусели -->
+        <!-- Кнопка, осуществляющая переход на предыдущий слайд с помощью атрибута data-slide="prev" -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <!-- Кнопка, осуществляющая переход на следующий слайд с помощью атрибута data-slide="next" -->
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+    <div class="catalog">
+        <ul class="nav">
+            <li class="catalog-title">КАТАЛОГ</li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">КОЛЬЦА<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">МУЖСКИЕ</a></li>
+                    <li><a href="#">ЖЕНСКИЕ</a></li>
+                    <li><a href="#">ОБРУЧАЛЬНЫЕ</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">КУЛОНЫ<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">МУЖСКИЕ</a></li>
+                    <li><a href="#">ЖЕНСКИЕ</a></li>
+                    <li><a href="#">ОБРУЧАЛЬНЫЕ</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">СЕРЬГИ</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">БРАСЛЕТЫ<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">МУЖСКИЕ</a></li>
+                    <li><a href="#">ЖЕНСКИЕ</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">ЦЕПИ</a></li>
+        </ul>
+    </div>
+    <main>
+        <h2>ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
+        <div class="popular">
+            <div class="product">
+                <a class="name-product" href="#">Серьги из серебра “Лазурит”</a>
+                <p>Цена: <span>1600<i class="fa fa-rub"></i></span></p>
+                <a class="add" href="#">ДОБАВИТЬ</a>
+            </div>
+            <div class="product">
+                <a class="name-product" href="#">Серьги из серебра “Лазурит”</a>
+                <p>Цена: <span>1600<i class="fa fa-rub"></i></span></p>
+                <a class="add" href="#">ДОБАВИТЬ</a>
+            </div>
+            <div class="product">
+                <a class="name-product" href="#">Серьги из серебра “Лазурит”</a>
+                <p>Цена: <span>1600<i class="fa fa-rub"></i></span></p>
+                <a class="add" href="#">ДОБАВИТЬ</a>
+            </div>
+            <div class="product">
+                <a class="name-product" href="#">Серьги из серебра “Лазурит”</a>
+                <p>Цена: <span>1600<i class="fa fa-rub"></i></span></p>
+                <a class="add" href="#">ДОБАВИТЬ</a>
+            </div>
+            <div class="product">
+                <a class="name-product" href="#">Серьги из серебра “Лазурит”</a>
+                <p>Цена: <span>1600<i class="fa fa-rub"></i></span></p>
+                <a class="add" href="#">ДОБАВИТЬ</a>
+            </div>
+            <div class="product">
+                <a class="name-product" href="#">Серьги из серебра “Лазурит”</a>
+                <p>Цена: <span>1600<i class="fa fa-rub"></i></span></p>
+                <a class="add" href="#">ДОБАВИТЬ</a>
+            </div>
+        </div>
+        <a class="all-product" href="#">ПРОСМОТРЕТЬ ВСЕ ТОВАРЫ<i class="fa fa-chevron-right"></i></a>
+        <h2 class="new-product">НОВЫЕ ТОВАРЫ</h2>
+        <div class="new">
+            <div class="product2">
+                <div class="corner">
+                    <span class="corner-text">НОВИНКА</span>
+                </div>
+                <a class="name-product" href="#">Серьги из серебра “Лазурит”</a>
+                <p>Цена: <span>1600<i class="fa fa-rub"></i></span></p>
+                <a class="add" href="#">ДОБАВИТЬ</a>
+            </div>
+            <div class="product2">
+                <div class="corner">
+                    <span class="corner-text">НОВИНКА</span>
+                </div>
+                <a class="name-product" href="#">Серьги из серебра “Лазурит”</a>
+                <p>Цена: <span>1600<i class="fa fa-rub"></i></span></p>
+                <a class="add" href="#">ДОБАВИТЬ</a>
+            </div>
+            <div class="product2">
+                <div class="corner">
+                    <span class="corner-text">НОВИНКА</span>
+                </div>
+                <a class="name-product" href="#">Серьги из серебра “Лазурит”</a>
+                <p>Цена: <span>1600<i class="fa fa-rub"></i></span></p>
+                <a class="add" href="#">ДОБАВИТЬ</a>
+            </div>
+        </div>
+        <a class="all-product" href="#">ПРОСМОТРЕТЬ ВСЕ ТОВАРЫ<i class="fa fa-chevron-right"></i></a>
+        <h2 class="news-title">НОВОСТИ</h2>
+        <div class="news">
+            <div class="news-box">
+                <h2 class="promo">Проводиться АКЦИЯ</h2>
+                <p>Мы рады сообщить об открытии нового магазина “Мастерская серебра” и в связи с этим, прово...</p>
+                <span><i class="fa fa-clock-o"></i>Вторник в 16:49</span><br>
+                <span class="comment"><i class="fa fa-comment-o"></i>Коментариев (0)</span>
+                <a class="desciption" href="#">ЧИТАТЬ ПОДРОБНЕЕ</a>
+            </div>
+            <div class="news-box">
+                <h2 class="promo">Проводиться АКЦИЯ</h2>
+                <p>Мы рады сообщить об открытии нового магазина “Мастерская серебра” и в связи с этим, прово...</p>
+                <span><i class="fa fa-clock-o"></i>Вторник в 16:49</span><br>
+                <span class="comment"><i class="fa fa-comment-o"></i>Коментариев (0)</span>
+                <a class="desciption" href="#">ЧИТАТЬ ПОДРОБНЕЕ</a>
+            </div>
+        </div>
+        <a class="view-news" href="#">ПРОСМОТРЕТЬ ВСЕ НОВОСТИ<i class="fa fa-chevron-right"></i></a>
+        <a class="up" href="#" onClick="scroll(0,0); return false"><i class="fa fa-chevron-circle-up fa-4x"></i></a>
+    </main>
+    <div class="clear"></div>
+    <footer>
+        <div class="left-block">
+            <div class="advice">
+                <span>ПОСОВЕТОВАТЬ ДРУГУ</span>
+                <div class="social_icon_footer">
+                    <a href="https://ru-ru.facebook.com" class="social_item fb"></a>
+                    <a href="https://vk.com" class="social_item vk"></a>
+                    <a href="https://twitter.com" class="social_item tw"></a>
+                </div>
+            </div>
+            <div class="pay"></div>
+            <div class="line"></div>
+            <span class="copyright">Интернет-магазин ювелирных товаров (c) 2015 г.Омск</span>
+        </div>
+        <div class="catalog-footer-box">
+            <ul class="catalog-footer">
+                <li class="catalog-title-footer">КАТАЛОГ</li>
+                <li><a href="#">КОЛЬЦА</a></li>
+                <li><a href="#">КУЛОНЫ</a></li>
+                <li><a href="#">СЕРЬГИ</a></li>
+                <li><a href="#">БРАСЛЕТЫ</a></li>
+                <li><a href="#">ЦЕПИ</a></li>
+            </ul>
+        </div>
+        <div class="menu-footer-box">
+            <ul class="menu-footer">
+                <li class="menu-title-footer">MEНЮ</li>
+                <li><a href="#">ГЛАВНАЯ</a></li>
+                <li><a href="#">ОПЛАТА</a></li>
+                <li><a href="#">ДОСТАВКА</a></li>
+                <li><a href="#">КАК КУПИТЬ</a></li>
+                <li><a href="#">НОВОСТИ</a></li>
+                <li><a href="#">КОНТАКТЫ</a></li>
+            </ul>
+        </div>
+        <div class="contact-footer" itemscope itemtype="http://schema.org/Organization">
+            <h2 class="contact-footer-title">КОНТАКТНАЯ ИНФОРМАЦИЯ</h2>
+            <span itemprop="phone">7 (929) 615-55-98</span><br>
+            <span itemprop="email">info@evamax.ru</span>
+            <p>Мы работаем для Вас:<br>ПН-ПТ: 08:00 - 18:00<br>СБ: 10:00 - 16:00</p>
+        </div>
+    </footer>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
