@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1500px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.header {
+    background-color:  #abeafa;
+    width: 1500px;
+    height: 700px;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 234px;
+    top: 24px;
+}
+.social_icon {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    top: 48px;
+    right: 205px;
+}
+
+.social_item {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url("img/spritesheet.png");
+}
+
+.fb {
+    background-position: 2px 0;
+}
+
+.twitter {
+    background-position: -70px 0;
+}
+
+.google {
+    background-position: -97px 0;
+}
+
+.pinterst {
+    background-position: -46px 0;
+}
+
+.instagram {
+    background-position: -21px 0;
+}
+
+.welcome {
+    width: 270px;
+    height: 300px;
+    background-color: #fff51f;
+    position: absolute;
+    left: 165px;
+    top: 336px;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(fonts/Raleway-Regular.ttf);
+}
+
+.title1 {
+    font-family: 'Raleway', sans-serif;
+    color:  #333333;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    display: block;
+    width: 100%;
+    height:100px;
+    margin-top: 75px;
+    margin-left: 23px;
+    line-height: 30px;
+}
+
+.greeting1 {
+    font-family: 'Raleway', sans-serif;
+    line-height: 14px;
+    text-align: left;
+    font-size: 18px;
+    margin-left: 22px;
+    margin-right: 30px;
+    margin-top: -12px;
+}
+
+.jp {
+    width: 313px;
+    height: 280px;
+    position: absolute;
+    right: 274px;
+    top: 243px;
+    left: 913px;
+}
+
+.title2 {
+    font-family: 'Raleway', sans-serif;
+    color: #fff51f;;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: left;
+    display: block;
+    line-height: 34px;
+}
+
+.greeting2 {
+    font-family: 'Raleway', sans-serif;
+    line-height: 24px;
+    text-align: left;
+    font-size: 18px;
+    color:  #fff51f;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.button {
+    background-color:  #fff51f;
+    width: 124px;
+    height: 49px;
+    text-align: center;
+    line-height: 49px;
+    font-weight: 800;
+    margin-top: 60px;
+}
+
+.button a {
+    text-decoration: none;
+    color:  #000000;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+
+.button a:hover {
+    color: red;
+}
+
+.wrapper {
+    width: 1170px;
+    margin: 0 auto;
+    border: 1px solid green;
+}
+
+.aside {
+    background-color:  #26d2fc;
+    width: 270px;
+    height: 470px;
+    float: left;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-Regular.ttf);
+}
+
+.menu {
+   background-color: #333333;
+}
+
+.menu a {
+    color: #ffffff;
+}
+
+.aside ul li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 36px;
+    text-align: left;
+    list-style-type: none;
+    height: 39px;
+    display: block;
+}
+
+li a {
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    border: 1px solid black;
+    color: #000000;
+    padding-left: 40px;
+}
+
+li:hover {
+    background-color: #333333;
+}
+
+li a:hover {
+    color: #ffffff;
+}
+
+.main {
+    background-color: orange;
+    width: 870px;
+    height: 400px;
+    float: right;
+}
+
+.brand {
+    clear: both;
+    width: 100%;
+    height: 160px;
+    background-color: bisque;
+}
+
+.instagramm {
+    width: 100%;
+    height: 350px;
+    background-color: aqua;
+}
+
+.social_button  {
+    background-color:  #3b5997;
+    width: 100%;
+    height: 150px;
+}
+
+.footer {
+    background-color:  #373737;
+    width: 100%;
+    height: 348px;
+}
+
+
+
+
+
