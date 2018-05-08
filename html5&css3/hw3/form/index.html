@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="container1">
+        <div class="column_left">
+            <h2>Адрес</h2><hr>
+            <p class="city">г. Париж</p>
+            <p>Челябинская обл.</p>
+            <p>пр. Монмартр 21-1</p>
+            <p>Василий Пупкин</p>
+        </div>
+        <div class="column_right">
+            <h2>Отправка сообщения</h2><hr>
+            <form method="post">
+                <dl>
+                    <dt><label for="name">Ваше имя<em>*</em></label></dt>
+                    <dd><input id="name" required pattern="\S+[А-яа-я]"><br></dd>
+                    <dt><label for="email">Ваш E-Mail <em>*</em></label></dt>
+                    <dd><input id="email" type="email" required pattern="\S+@[a-z]+.[a-z]+"><br></dd>
+                    <dt><label for="text">Ваше сообщение <em>*</em></label></dt>
+                    <dd><textarea id="text" required></textarea></dd>
+                </dl>
+            </form>
+            <input type="submit" value="Отправить">
+        </div>
+    </div>
+</div>
+</body>
+</html>
