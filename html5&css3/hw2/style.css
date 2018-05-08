@@ -1,0 +1,509 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+.container {
+    width: 1500px;
+    height: 1833px;
+}
+
+@font-face {
+    font-family: 'Trebuchet MS';
+    src: url(fonts/Trebuchet_MS.ttf);
+}
+
+header {
+    display: flex;
+    height: 119px;
+    position: relative;
+    padding-left: 246px;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-family: 'Trebuchet MS', serif;
+    color: #595959;
+    font-size: 51px;
+    font-weight: 400;
+    line-height: 31px;
+    text-align: left;
+    width: 250px;
+    height: 50px;
+    margin-top: 45px;
+}
+
+header a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color:  #6dd025;
+    width: 29px;
+    height: 30px;
+    position: absolute;
+    left: 347px;
+    bottom: 38px;
+}
+
+nav {
+    display: flex;
+    margin-top: 46px;
+    margin-left: 302px;
+    width: 490px;
+    height: 39px;
+    justify-content: space-between;
+}
+
+@font-face {
+    font-family: 'SegoeWPN';
+    src: url(fonts/SegoeWPN.ttf);
+}
+
+nav a {
+    width: 101px;
+    height: 39px;
+    text-align: center;
+    line-height: 39px;
+    font-family: 'SegoeWPN', sans-serif;
+    color:  #323332;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+nav a:hover {
+    background-color: #323332;
+    color: white;
+}
+
+.home {
+    margin-right: 10px;
+}
+
+.articles {
+    margin-left: 4px;
+}
+
+.pages {
+    margin-right: 5px;
+}
+
+main,
+.title {
+    padding-left: 243px;
+    box-sizing: border-box;
+}
+
+main,
+aside {
+    margin-top: 40px;
+}
+
+@font-face {
+    font-family: 'SegoeWP';
+    src: url(fonts/SegoeWP.ttf);
+}
+
+.title>h1 {
+    font-family: 'SegoeWP', sans-serif;
+    color:  #5d5d5d;
+    font-size: 61px;
+    font-weight: 300;
+    line-height: 67px;
+    text-align: left;
+    width: 300px;
+    margin-top: 176px;
+    margin-left: 7px;
+}
+
+.review {
+    font-family: 'SegoeWP', sans-serif;
+    color:  #5d5d5d;
+    font-size: 47px;
+    font-weight: 300;
+    line-height: 67px;
+    text-align: left;
+    margin-left: 7px;
+}
+
+.video {
+    width: 204px;
+    height: 39px;
+    display: flex;
+    margin-top: 9px;
+    margin-left: 11px;
+    align-items: center;
+    justify-content: space-around;
+    background: black url("img/Shape_10.png") no-repeat 13px 12px;
+}
+
+.video>a {
+    font-family: 'SegoeWPN', sans-serif;
+    color:  #ffffff;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 39px;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 59px;
+}
+
+.title>img {
+    float: right;
+    margin-right: 87px;
+    margin-top: -244px;
+}
+
+.clear {
+    clear: both;
+}
+
+.picture {
+    width: 308px;
+    height: 242px;
+    margin-left: -3px;
+    background: url("img/Shape_2.png") no-repeat 40px 75px,
+                url("img/Shape_3.png") no-repeat 137px 70px,
+                url("img/Layer_14.png");
+}
+
+main {
+    float: left;
+    margin-bottom: 15px;
+}
+
+.main_lorem {
+    display: flex;
+}
+
+.lorem {
+    width: 344px;
+    margin-left: 22px;
+    margin-top: -2px;
+    position: relative;
+}
+
+.lorem>h2 {
+    font-family: 'SegoeWP', sans-serif;
+    color:  #696161;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 37px;
+    text-align: left;
+    margin-top: -3px;
+    margin-bottom: 3px;
+}
+
+.lorem>p {
+    font-family: 'SegoeWP', sans-serif;
+    color: #848484;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: left;
+}
+
+.back {
+    width: 32px;
+    height: 39px;
+    background: #C4C1B8 url("img/Layer_left.png") no-repeat 9px 6px;
+    display: inline-block;
+    position: absolute;
+    left: 283px;
+    bottom: -2px;
+}
+
+.forward {
+    width: 31px;
+    height: 39px;
+    background: #C4C1B8 url("img/Layer_right.png") no-repeat 10px 6px;
+    display: inline-block;
+    position: absolute;
+    left: 315px;
+    bottom: -2px;
+}
+
+.back:hover,
+.forward:hover {
+    background-color: gray;
+}
+
+.text {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.apple,
+.standart,
+.book {
+    width: 215px;
+    margin-top: 40px;
+    margin-left: -7px;
+}
+
+.apple>h3,
+.standart>h3,
+.book>h3 {
+    font-family: 'SegoeWP', sans-serif;
+    color: #696161;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 28px;
+    text-align: left;
+    margin-bottom: 7px;
+}
+
+.apple>span,
+.standart>span,
+.book>span {
+    font-family: 'SegoeWP', sans-serif;
+    color: #848484;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: justify;
+}
+
+.apple>p,
+.standart>p,
+.book>p {
+    font-family: 'SegoeWP', sans-serif;
+    color: #848484;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.standart {
+    margin-left: 15px;
+}
+
+.book {
+    margin-left: 20px;
+}
+
+aside {
+    padding-right: 243px;
+    box-sizing: border-box;
+}
+
+.guide {
+    border: 1px solid #e1dddd;
+    width: 319px;
+    height: 249px;
+    float: right;
+    background: url("img/ad1.png");
+}
+
+.guide>a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.week {
+    background-color:  #86e7f0;
+    width: 319px;
+    height: 271px;
+    float: right;
+    position: relative;
+    margin-top: 48px;
+}
+
+.circle_12 {
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 5px;
+    border-color:  #ffffff;
+    background-color:  #ef809f;
+    width: 123px;
+    height: 122px;
+    position: absolute;
+    top: -20px;
+    right: 89px;
+}
+
+.circle_12>h2 {
+    font-family: 'SegoeWPN', sans-serif;
+    color:  #ffffff;
+    font-size: 71px;
+    font-weight: 900;
+    line-height: 27px;
+    text-align: center;
+    margin-top: 38px;
+}
+
+.circle_12>h3 {
+    font-family: 'SegoeWPN', sans-serif;
+    color:  #ffffff;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 29px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.week>h2 {
+    font-family: 'SegoeWP', sans-serif;
+    color:  #ffffff;
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 55px;
+    text-align: center;
+    margin-top: 112px;
+    height: 47px;
+}
+
+@font-face {
+    font-family: 'Optima';
+    src: url(fonts/Optima.ttf);
+}
+
+.week>span {
+    font-family: 'Optima', sans-serif;
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    width: 240px;
+    display: inline-block;
+    margin-left: 39px;
+    margin-top: 8px;
+}
+
+.week a {
+    width: 179px;
+    height: 33px;
+    display: block;
+    border-radius: 5px;
+    background-color: #1DB6B6;
+    margin-left: 74px;
+    margin-top: 8px;
+
+    text-decoration: none;
+    font-family: 'Optima', sans-serif;
+    color:  #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+}
+
+.mail {
+    background-color:  #393a39;
+    width: 319px;
+    height: 265px;
+    float: right;
+    margin-top: 28px;
+    padding-left: 30px;
+    padding-right: 31px;
+    box-sizing: border-box;
+}
+
+.mail>h2 {
+    font-family: 'SegoeWP', sans-serif;
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: center;
+    margin-top: 19px;
+    margin-left: 5px;
+}
+
+.mail>p {
+    font-family: 'SegoeWP', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: left;
+    margin-top: 14px;
+}
+
+input[placeholder] {
+    width: 257px;
+    height: 26px;
+    font-family: 'SegoeWP', sans-serif;
+    color: #787878;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+input[type="submit"] {
+    width: 179px;
+    height: 33px;
+    background-color: #AA2A53;
+    border-radius: 7px;
+    border: none;
+    color:  #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    margin-left: 43px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color:  #393a39;
+    width: 1500px;
+    height: 86px;
+    clear: both;
+    position: relative;
+}
+
+footer>p {
+    font-family: 'SegoeWP', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    margin-left: -5px;
+    line-height: 70px;
+}
+
+.social_icon {
+    width: 114px;
+    height: 33px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 21px;
+    left: 1182px;
+}
+
+.social_item {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url("img/spritesheet.png");
+}
+
+.fb {
+   background-position:  0 0;
+}
+
+.tw {
+    background-position: -40px 0;
+}
+
+.google {
+    background-position: -80px 0;
+}
