@@ -1,0 +1,312 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container {
+    width: 1200px;
+    min-height: 2000px;
+    margin: 0 auto;
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+url('../font-awesome/fonts/fontawesome-webfont.woff2'),
+url('../font-awesome/fonts/fontawesome-webfont.woff'),
+url('../font-awesome/fonts/fontawesome-webfont.ttf'),
+url('../font-awesome/fonts/fontawesome-webfont.eot');
+}
+
+@font-face {
+    font-family: 'majestic';
+    src: url('fonts/majestic.ttf'),
+    url('fonts/majestic-webfont.woff2') format('woff2'),
+    url('fonts/majestic-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'blogger_sans';
+    src: url('fonts/BloggerSans.ttf'),
+    url('fonts/bloggersans-webfont.woff2') format('woff2'),
+    url('fonts/bloggersans-webfont.woff') format('woff');
+}
+
+header {
+    background: -webkit-radial-gradient(circle farthest-side at 50%, #cccbcb 0%, #797979 100%);
+    background: -moz-radial-gradient(circle farthest-side at 50%, #cccbcb 0%, #797979 100%);
+    background: -o-radial-gradient(circle farthest-side at 50%, #cccbcb 0%, #797979 100%);
+    background: -ms-radial-gradient(circle farthest-side at 50%, #cccbcb 0%, #797979 100%);
+    background: radial-gradient(circle farthest-side at 50%, #cccbcb 0%, #797979 100%);
+    box-shadow: 0 1px 5px 0 rgba(89, 88, 88, 0.75);
+    width: 1200px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.ask {
+    margin-left: 100px;
+    float: left;
+}
+
+.ask a {
+    text-decoration: none;
+    font-family: 'BloggerSans', serif;
+    color:  #ffffff;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.answer {
+    border-left: 1px solid white;
+    padding-left: 5px;
+    padding-right: 3px;
+}
+
+.reviews {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.social_icon {
+    width: 145px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    float: right;
+    margin-top: 3px;
+    margin-right: 105px;
+}
+
+.social_item {
+    display: block;
+    width: 50px;
+    height: 40px;
+    background: url("img/spritesheet.png");
+
+}
+
+.fb {
+    background-position: -12px -13px;
+}
+
+.vk {
+    background-position: 57px -13px;
+}
+
+.tw {
+    background-position: 123px -13px;
+}
+
+.logo {
+    margin-left: 97px;
+    width: 179px;
+}
+
+.logo>a {
+    font-family: 'majestic', sans-serif;
+    color:  #e51616;
+    font-size: 43px;
+    text-align: left;
+    line-height: 30px;
+    width: 179px;
+    height: 100px;
+    background: url("img/logo.png") no-repeat 77px -7px;
+    display: block;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding-top: 35px;
+}
+
+.contact {
+   margin-left: 485px;
+    margin-top: -80px;
+}
+
+.fa-phone {
+    border: 2px solid red;
+    border-radius: 50%;
+    padding: 3px;
+    color: red;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.fa-envelope-o {
+    color: red;
+    margin-left: 93px;
+    margin-right: 5px;
+    font-size: 30px;
+}
+
+.contact>span {
+    font-family: 'blogger_sans', serif;
+    color:  #f32828;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+
+form {
+    margin-top: 10px;
+    position: relative;
+}
+
+input[type="email"] {
+    border-style: solid;
+    border-width: 1px;
+    border-color:  #848383;
+    border-radius: 10px;
+    background-color:  #ffffff;
+    width: 419px;
+    height: 37px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 35px;
+    outline: none;
+}
+
+.submit {
+    width: 26px;
+    height: 26px;
+    border: none;
+    background: url("img/button.png");
+    position: absolute;
+    left: 385px;
+    top: 6px;
+}
+
+.menu {
+    border-radius: 8px;
+    background-color:  #cac9c9;
+    box-shadow: 0 1px 5px 0 rgba(89, 88, 88, 0.75);
+    width: 999px;
+    height: 44px;
+    margin-top: 12px;
+    margin-left: 99px;
+    display: flex;
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    display: block;
+    height: 44px;
+    width: 130px;
+    font-family: 'blogger_sans', serif;
+    color:  #ffffff;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    border-right: 1px solid gray;
+    line-height: 44px;
+}
+
+.menu a:hover {
+    background: -webkit-radial-gradient(circle farthest-side at 50%, #cccbcb 0%, #797979 100%);
+    background: -moz-radial-gradient(circle farthest-side at 50%, #cccbcb 0%, #797979 100%);
+    background: -o-radial-gradient(circle farthest-side at 50%, #cccbcb 0%, #797979 100%);
+    background: -ms-radial-gradient(circle farthest-side at 50%, #cccbcb 0%, #797979 100%);
+    background: radial-gradient(circle farthest-side at 50%, #cccbcb 0%, #797979 100%);
+    box-shadow: 0 1px 5px 0 rgba(89, 88, 88, 0.75);
+}
+
+.basket {
+    width: 137px;
+    height: 181px;
+    background: url("img/handcart.png") no-repeat 45px 80px,
+            url("img/basket.png") no-repeat 0 -50px;
+    border: none;
+    position: absolute;
+    right: 175px;
+    top: 50px;
+}
+
+.basket p {
+    font-family: 'blogger_sans', serif;
+    color:  #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.breadcrumbs{
+    overflow: hidden;
+    width: 100%;
+    list-style: none;
+    margin-top: 10px;
+    margin-left: 65px;
+}
+
+.breadcrumbs li {
+    float: left;
+}
+
+.breadcrumbs a {
+    padding: 8px 8px 8px 25px;
+    display: block;
+    text-decoration: none;
+    font-family: 'blogger_sans', serif;
+    color:  #868484;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    position: relative;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs li:last-of-type a {
+    color: red;
+}
+
+.main_link::after {
+    content: "\f061";
+    position: absolute;
+    font-family: 'FontAwesome', sans-serif;
+    top: 223px;
+    right: 1050px;
+}
+
+.carousel {
+    width: 1000px;
+    height: 320px;
+    background-color: red;
+    margin-left: 99px;
+    margin-top: -9px;
+}
+
+.catalog {
+    width: 252px;
+    float: left;
+    margin-left: 99px;
+    background-color: gainsboro;
+    min-height: 300px;
+    margin-top: 58px;
+}
+
+main {
+    width: 719px;
+    min-height: 1000px;
+    background-color: aqua;
+    float: right;
+    margin-top: 58px;
+    margin-right: 100px;
+}
+
+.clear {
+    clear: both;
+}
+
+footer {
+    background-color:  #b1b0b0;
+    width: 1200px;
+    height: 201px;
+}
