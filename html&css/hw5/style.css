@@ -1,0 +1,191 @@
+body {
+    background-color: #f8f8f8
+}
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.menu {
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: red;
+    display: flex;
+    float: right;
+    height: 30px;
+    width: auto;
+    background-color: black;
+}
+
+li {
+    height: 30px;
+    width: 200px;
+    text-align: center;
+}
+
+.menu a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: aqua;
+}
+
+li a:hover {
+    color: red;
+    background-color: yellow;
+}
+
+header {
+    border: 1px solid #b5b7ba;
+    height: 100px;
+    background: url("img/header.jpg")no-repeat center bottom;
+}
+
+img[alt='logo'] {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2,h4 {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #eaeaea;
+    text-align: center;
+}
+
+.greeting {
+    float: right;
+    width: 550px;
+    padding: 25px 50px;
+}
+
+table {
+    border: 1px solid black;
+    float: right;
+    width: 800px;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid black;
+    height: 90px;
+    width: 100px;
+}
+
+input[value="купить"] {
+    width: 100px;
+    height: 50px;
+    border: 1px solid transparent;
+    background-color: red;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    outline: none;
+    margin-left: 100px;
+}
+
+input[value="купить"]:hover {
+    background-color: yellow;
+    color: black;
+}
+
+input[value="купить"]:active {
+    background-color: red;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.description {
+    width: 100px;
+    height: 100px;
+    margin-right: 60px;
+    margin-left: 20px;
+}
+
+.catalog {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.short_description {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+.detailed_description {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    list-style-type: square;
+}
+
+.features {
+    color: black;
+    font-size: 16px;
+    font-family: 'Arial', serif;
+}
+
+input[type='text'] {
+    width: 200px;
+    height: 20px;
+    color: darkgray;
+    font: cursive;
+    font-size: 14px;
+    margin: auto;
+    text-transform: capitalize;
+}
+
+textarea {
+    width: 240px;
+    text-transform: capitalize;
+}
+
+input[placeholder="Введите e-mail"]:focus {
+    background-color: blanchedalmond;
+    color: red;
+}
+
+img[alt='photo'] {
+    border: 1px solid black;
+}
+
+.photo {
+    margin-bottom: 20px;
+}
+
+a:hover img {
+    border-color: transparent;
+}
+
+p[class="features"]::first-letter {
+    color: red;
+    font-size: 24px;
+}
+
+footer {
+    background-color: #B5B1BA;
+    height: 140px;
+    line-height: 140px;
+}
+
+.copypight {
+    float: right;
+    margin-right: 70px;
+}
+
