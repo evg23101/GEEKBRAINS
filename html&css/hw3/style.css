@@ -1,0 +1,64 @@
+body {
+    background-color: #f8f8f8
+}
+
+.menu {
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: darkgray;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2,h4 {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #eaeaea;
+}
+
+.short_description {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+.detailed_description {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    list-style-type: square;
+}
+
+.features {
+    color: black;
+    font-size: 16px;
+    font-family: 'Arial', serif;
+}
+
+input[type='text'] {
+    width: 200px;
+    height: 20px;
+    color: darkgray;
+    font: cursive;
+    font-size: 14px;
+}
+
+img[target='_blank'] {
+    border: 1px solid black;
+}
+
+footer {
+    text-align: center;
+    background-color: #B5B1BA;
+}
