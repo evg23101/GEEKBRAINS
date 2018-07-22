@@ -1,0 +1,47 @@
+.container {
+    margin: 0 auto;
+    width: auto;
+    min-height: 500px;
+}
+
+.good {
+    border: 1px solid black;
+    min-height: inherit;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    border: 1px solid black;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.card h2{
+    text-align: left;
+}
+
+.card {
+    border: 1px solid black;
+}
+
+#name_card1,
+#name_card2,
+#name_card3 {
+    float: left;
+}
+
+#price_card1,
+#price_card2,
+#price_card3 {
+    margin-left: 100px;
+}

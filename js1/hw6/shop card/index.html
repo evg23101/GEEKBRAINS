@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Магазин</title>
+    <script>
+        let total1 = 0;
+        let total2 = 0;
+        let total3 = 0;
+        let card_n1;
+        let card_p1;
+        function f1() {
+            let name1 = document.getElementById("name_good1");
+            let price1 = document.getElementById("price1");
+            card_n1 = document.getElementById("name_card1");
+            card_p1 = document.getElementById("price_card1");
+            card_n1.innerText = name1.textContent;
+            card_p1.innerText = price1.textContent + '' + 'руб.';
+            total1 = +price1.textContent;
+            total();
+        }
+
+        function f2() {
+            let name2 = document.getElementById("name_good2");
+            let price2 = document.getElementById("price2");
+            let card_n2 = document.getElementById("name_card2");
+            let card_p2 = document.getElementById("price_card2");
+            card_n2.innerText = name2.textContent;
+            card_p2.innerText = price2.textContent + '' + 'руб.';
+            total2 = +price2.textContent;
+            total();
+        }
+
+        function f3() {
+            let name3 = document.getElementById("name_good3");
+            let price3 = document.getElementById("price3");
+            let card_n3 = document.getElementById("name_card3");
+            let card_p3 = document.getElementById("price_card3");
+            card_n3.innerText = name3.textContent;
+            card_p3.innerText = price3.textContent + '' + 'руб.';
+            total3 = +price3.textContent;
+            total();
+        }
+
+        function total() {
+            let total_price = 0;
+            total_price = total1 + total2 + total3;
+            let total_card = document.getElementById("total");
+            total_card.innerText = 'Итого:' + ' ' + total_price + ' ' + 'руб.';
+        }
+
+        function f4() {
+            document.getElementById("name_card1").innerHTML = "";
+            document.getElementById("price_card1").innerHTML = "";
+            document.getElementById("name_card2").innerHTML = "";
+            document.getElementById("price_card2").innerHTML = "";
+            document.getElementById("name_card3").innerHTML = "";
+            document.getElementById("price_card3").innerHTML = "";
+            document.getElementById("total").innerHTML = "";
+        }
+    </script>
+</head>
+<body>
+<div class="card">
+    <h2>Корзина</h2>
+    <div id="name_card1"></div>
+    <div id="price_card1"></div>
+    <div id="name_card2"></div>
+    <div id="price_card2"></div>
+    <div id="name_card3"></div>
+    <div id="price_card3"></div>
+    <br>
+    <div id="total"></div>
+    <button onclick="f4()">Очистить</button>
+</div>
+<div class="container">
+    <div class="good">
+        <h2 id="name_good1">Товар 1</h2>
+        <img class="photo_goods" src="img/good_1.jpg" width="500px" height="400px">
+        <p class="description">Описание товара</p>
+        <div class="clear"></div>
+        <span id="price1">1300</span><span>руб.</span>
+        <button onclick="f1()">Купить</button>
+    </div>
+    <div class="good">
+        <h2 id="name_good2">Товар 2</h2>
+        <img class="photo_goods" src="img/good_2.jpg" width="500px" height="400px">
+        <p class="description">Описание товара</p>
+        <div class="clear"></div>
+        <span id="price2">1100</span><span>руб.</span>
+        <button onclick="f2()">Купить</button>
+    </div>
+    <div class="good">
+        <h2 id="name_good3">Товар 3</h2>
+        <img class="photo_goods" src="img/good_3.jpg" width="500px" height="400px">
+        <p class="description">Описание товара</p>
+        <div class="clear"></div>
+        <span id="price3">1500</span><span>руб.</span>
+        <button onclick="f3()">Купить</button>
+    </div>
+</div>
+</body>
+</html>

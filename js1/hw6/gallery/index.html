@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function init() {
+            let images = document.getElementsByTagName("img");
+            let current = 0;
+            for (let i=0; i<images.length; i++) {
+                images[i].onclick = changeBigPicture;
+
+            }
+        }
+        function changeBigPicture(event) {
+            let appDiv = document.getElementById("big_picture");
+            appDiv.innerHTML = "";
+            let eventElement = event.target;
+            let imageNameParts = eventElement.id.split("_");
+            let src = "img/big/" + imageNameParts[1] + ".jpg";
+            let imageDomElement = document.createElement("img");
+            imageDomElement.src = src;
+            appDiv.appendChild(imageDomElement);
+            current = imageNameParts[1];
+        }
+    window.onload = init;
+
+        // функция смены картинок
+        let btn_prev = document.querySelector("#buttons #left");
+        let btn_next = document.querySelector("#buttons #right");
+
+        let images = document.querySelectorAll("#gallery img");
+        let i = 0;
+
+        btn_prev.onclick = function() {
+            images[i].style.display = "none";
+            i--;
+
+            if(i < 0){
+                i = images.length-1;
+            }
+            images[i].style.display = "block";
+        }
+
+        btn_next.onclick = function() {
+            images[i].style.display = "none";
+            i++;
+
+            if(i >= images.length){
+                i = 0;
+            }
+            images[i].style.display = "block";
+        }
+
+    </script>
+</head>
+<body>
+    <div id="big_picture"></div>
+<div class="buttons">
+    <button id="left"><img src="img/left_circular.png"></button>
+    <button id="right"><img src="img/right_circular.png"></button>
+</div>
+<div id="gallery">
+    <img id="image_1" src="img/small/101.jpg" alt="picture">
+    <img id="image_2" src="img/small/102.jpg" alt="picture">
+    <img id="image_3" src="img/small/103.jpg" alt="picture">
+    <img id="image_4" src="img/small/104.jpg" alt="picture">
+    <img id="image_5" src="img/small/105.jpg" alt="picture">
+    <img id="image_6" src="img/small/106.jpg" alt="picture">
+    <img id="image_7" src="img/small/107.jpg" alt="picture">
+    <img id="image_8" src="img/small/108.jpg" alt="picture">
+    <img id="image_9" src="img/small/109.jpg" alt="picture">
+    <img id="image_10" src="img/small/110.jpg" alt="picture">
+</div>
+</body>
+</html>
