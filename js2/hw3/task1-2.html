@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw3</title>
+    <script>
+        'use strict';
+        function Replace(sampleString, patternMatch, patternReplace) {
+            let sampleStringResult = sampleString.replace(patternMatch, patternReplace);
+            return sampleStringResult;
+        }
+
+        let patternMatch = /\s\'/g,
+            patternReplace = ' "',
+            sampleString = "to be or not to be, can't 'what' is the question",
+            sampleStringResult = Replace(sampleString, patternMatch, patternReplace);
+
+        sampleString = sampleStringResult;
+        patternMatch = /\'\s/g;
+        patternReplace = '" ';
+
+        sampleStringResult = Replace(sampleString, patternMatch, patternReplace);
+
+        alert('вот что стало:  ' + sampleStringResult);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
