@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function() {
+                $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+                    $(this)
+                        .addClass('active').siblings().removeClass('active')
+                        .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+                });
+        });
+    </script>
+</head>
+<body>
+<div class="tabs">
+    <ul class="tabs__caption">
+        <li class="active">Первая вкладка</li>
+        <li>Вторая вкладка</li>
+        <li>Третья вкладка</li>
+        <li>Червертая вкладка</li>
+    </ul>
+
+    <div class="tabs__content  active">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut blanditiis consectetur debitis deserunt dignissimos doloremque doloribus eaque eos expedita magni mollitia possimus quasi quidem sed sequi sit temporibus, voluptate!</p>
+    </div>
+
+    <div class="tabs__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium amet assumenda corporis culpa, dignissimos doloribus esse magni natus neque non omnis pariatur perspiciatis provident, quisquam tempora temporibus unde vitae.</p>
+    </div>
+
+    <div class="tabs__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam aut debitis, explicabo id illum possimus! Amet cum doloribus, ea exercitationem facere ipsam laboriosam nisi reiciendis sapiente sed soluta vitae!</p>
+    </div>
+
+    <div class="tabs__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem dolor expedita, id odit perferendis totam veritatis. At dolor dolores enim facere labore porro quas quidem soluta totam unde, voluptatum.</p>
+    </div>
+</div>
+
+
+<div class="tabs  vertical">
+
+    <ul class="tabs__caption">
+        <li class="active">Первая вкладка</li>
+        <li>Вторая вкладка</li></li>
+        <li>Третья вкладка
+        <li>Червертая вкладка</li>
+    </ul>
+
+    <div class="tabs__content  active">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut blanditiis consectetur debitis deserunt dignissimos doloremque doloribus eaque eos expedita magni mollitia possimus quasi quidem sed sequi sit temporibus, voluptate!</p>
+    </div>
+
+    <div class="tabs__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium amet assumenda corporis culpa, dignissimos doloribus esse magni natus neque non omnis pariatur perspiciatis provident, quisquam tempora temporibus unde vitae.</p>
+    </div>
+
+    <div class="tabs__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam aut debitis, explicabo id illum possimus! Amet cum doloribus, ea exercitationem facere ipsam laboriosam nisi reiciendis sapiente sed soluta vitae!</p>
+    </div>
+
+    <div class="tabs__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem dolor expedita, id odit perferendis totam veritatis. At dolor dolores enim facere labore porro quas quidem soluta totam unde, voluptatum.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

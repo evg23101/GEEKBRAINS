@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw2</title>
+    <style>
+        input,
+        select {
+            margin-bottom: 5px;
+        }
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+$(document).ready(function () {
+    $.ajax({
+        type: 'GET',
+        url: './cities.json',
+        dataType: 'json',
+        success: function (data) {
+            for (let i=0; i<data.length; i++) {
+                $('#city').append('<option>' + data[i] + '</option>');
+            }
+        },
+        error: function (error) {
+            console.log(error);
+        }
+        });
+});
+    </script>
+</head>
+<body>
+<p id="message" >Пожалуйста, заполните все поля формы!</p>
+<form>
+    <fieldset>
+    E-mail: <input id="email" name="email" size="20" /><br />
+    Телефон: <input id="phone" name="phone" size="20" /><br />
+        Город: <select id="city" name="city">
+        <option value=""></option>
+        </select><br />
+    Сообщение: <input id="text" name="text" size="40"/><br />
+
+        <input name="button" type="submit" value="Отправить">
+    </fieldset>
+</form>
+
+</body>
+</html>
