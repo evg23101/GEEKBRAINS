@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.good{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid lightgreen;
+    display: inline-block;
+}
+
+#basket_wrapper {
+    margin: 10px;
+}
+
+.comment_item {
+    border: 1px;
+    border-radius: 10px;
+    background-color: #edd3cf;
+    margin: 10px;
+    width: 300px;
+    padding: 10px;
+}
+
+.likes {
+    width: 40px;
+    border: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.likes>img {
+    vertical-align: middle;
+}
+
+.likes:hover {
+    background-color: #ffa58e;
+}
+
+#form_comment {
+    margin: 10px;
+
+}
+
+fieldset {
+    padding: 10px;
+    width: 300px;
+}
+
+.delete {
+    display: block;
+    float: right;
+    cursor: pointer;
+}
+
+.likes {
+    width: 50px;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.likes>img {
+    margin-right: 10px;
+}
+
+.user_name {
+    text-decoration: underline;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#submit {
+    cursor: pointer;
+}
