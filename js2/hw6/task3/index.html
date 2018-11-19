@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<link href="styles/style.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="scripts/jquery.js"></script> 
+<script type="text/javascript" src="scripts/jquery.cycle.all.min.js"></script> 
+<script type="text/javascript"> 
+$(document).ready(function() {
+		$("#slideshowCont").css("overflow", "hidden");
+		$("#last").css("display", "block");
+		$("#next").css("display", "block");
+		$('#slideShow ul').cycle({
+		fx: 'scrollLeft',
+		pause:1,
+		next: '#next',
+		prev: '#last',
+		timeout:0
+		});
+});
+
+</script> 
+</head>
+<body>
+<div id="slideshowCont"> 
+<img src="images/SlastBtn.png"  alt="next" id="next" width="40"/> 
+	<div id="slideShow"> 
+	<ul> 
+		<li>
+			<div><img src="images/good.png" alt="testimage"  width="120" height="120"/>
+				<p>Товар 1</p>
+			</div>
+			<div><img src="images/good.png" alt="testsimage"  width="120" height="120"/>
+				<p>Товар 2</p>
+			</div>
+			<div><img src="images/good.png" alt="testimage"  width="120" height="120"/>
+				<p>Товар 3</p>
+			</div>
+		</li>
+		<li><div><img src="images/good.png" alt="testimage"  width="120" height="120"/>
+			<p>Товар 4</p>
+		</div>
+			<div><img src="images/good.png" alt="testimage"  width="120" height="120"/>
+				<p>Товар 5</p>
+			</div>
+			<div><img src="images/good.png" alt="testimage"  width="120" height="120"/>
+				<p>Товар 6</p>
+			</div>
+		</li>
+	</ul>
+	</div> 
+<img src="images/SnextBtn.png"  alt="last"  id="last" width="40"/> 
+</div> 
+
+</body> 
+</html>
