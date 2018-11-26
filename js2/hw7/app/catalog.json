@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "'Genius SlimStar 130 Black USB",
+    "price": "680",
+    "foto": "img/products/Genius.png"
+  },
+  {
+    "id": 1,
+    "name": "Rapoo 3000p Red USB",
+    "price": 880,
+    "foto": "img/products/Rapoo.png"
+  },
+  {
+    "id": 2,
+    "name": "Dialog AST-20UP",
+    "price": 520,
+    "foto": "img/products/Dialog.png"
+  },
+  {
+    "id": 3,
+    "name": "Acer V206HQLBb",
+    "price": 4459,
+    "foto": "img/products/Acer.png"
+  },
+  {
+    "id": 4,
+    "name": "ZyXEL Keenetic Extra II",
+    "price": "3390",
+    "foto": "img/products/Zyxel.png"
+  }
+]
