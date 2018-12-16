@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw</title>
+    <script>
+        let calculateArea = (...p) => {
+            let object = {
+                area: 0,
+                figure: '',
+                input: []
+            },
+            sides = p.length,
+            area = 0;
+            for (let item in p) {
+                if (p[item] <= 0) {
+                    return console.log('Повторите ввод. Одна из сторон, меньше, либо равна нулю!');
+                }
+            }
+            switch (sides) {
+                case 2:
+                    object.figure = (p[0] == p[1]) ? 'Квадрат' : object.figure = 'Прямоугольник';
+                    area = p[0] * p[1];
+                    break;
+                case 3:
+                    object.figure = 'Треугольник';
+                    let a = p[0],
+                        b = p[1],
+                        c = p[2],
+                        pr = (a + b + c) / 2; // Полупериметр треугольника
+                    area = Math.sqrt(pr * (pr - a) * (pr - b) * (pr - c)); // Площадь треугольника по 3-м сторонам
+                    break;
+                default:
+                    return console.log('Слишком сложная фигура ) Я таких не знаю )');
+            }
+            object.area = area;
+            object.input = p;
+            return console.log(object);
+        }
+
+        calculateArea(2, 2); // Квадрат
+        calculateArea(3, 4); // Прямоугольник
+        calculateArea(3, 4, 5); // Треугольник
+        calculateArea(1, 2, 3, 4, 5); // Слишком сложная фигура ) Я таких не знаю )
+        calculateArea(1, 2, -3, 4, 5); // Повторите ввод. Одна из сторон, меньше, либо равна нулю!
+    </script>
+</head>
+<body>
+
+</body>
+</html>

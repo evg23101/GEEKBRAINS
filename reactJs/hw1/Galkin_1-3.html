@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw</title>
+    <script>
+        class Human {
+            constructor(name, age, dateOfBirth) {
+                this.name = name;
+                this.age = age;
+                this.dateOfBirth = dateOfBirth;
+            }
+            displayInfo() {
+                console.log(this);
+            }
+        }
+        class Employee extends Human {
+            constructor(name, age, dateOfBirth, salary, department) {
+                super(name, age, dateOfBirth);
+                this.salary = salary;
+                this.department = department;
+            }
+            displayInfo() {
+                super.displayInfo();
+            }
+        }
+        class Developer extends Employee {
+            constructor(name, age, dateOfBirth, salary, department, manager) {
+                super(name, age, dateOfBirth, salary, department);
+                this.manager = manager;
+            }
+            setManager(manager) {
+                this.manager = manager;
+            }
+            displayInfo() {
+                super.displayInfo();
+            }
+        }
+        class Manager extends Employee {
+            constructor(name, age, dateOfBirth, salary, department, developers) {
+                super(name, age, dateOfBirth, salary, department);
+                this.developers = [];
+            }
+            addDevelopers(developer) {
+                this.developers.push(developer);
+            }
+            delDevelopers(developer) {
+                for (let item in this.developers) {
+                    if (this.developers[item] == developer) {
+                        this.developers.splice(item, 1);
+                    }
+                }
+            }
+            displayInfo() {
+                super.displayInfo();
+            }
+        }
+        // Разработчики
+        let developer1 = new Developer('Коловрат', 27, '08/01/1978', 50000, 'FrontEnd');
+        let developer2 = new Developer('Кирилл', 28, '28/07/1986', 60000, 'BackEnd');
+        let developer3 = new Developer('Мефодий', 29, '29/07/1989', 70000, 'FrontEnd');
+        // Менеджеры
+        let manager1 = new Manager('Евкакий', 30, '30/07/1995', 80000, 'HR');
+        // <проверка>
+        manager1.addDevelopers(developer1);
+        manager1.addDevelopers(developer2);
+        manager1.addDevelopers(developer3);
+        manager1.delDevelopers(developer2);
+        developer1.setManager(manager1);
+        developer2.setManager(manager1);
+        developer3.setManager(manager1);
+        developer1.displayInfo();
+        developer2.displayInfo();
+        developer3.displayInfo();
+        manager1.displayInfo();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

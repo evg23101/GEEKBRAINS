@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw</title>
+    <script>
+        let loop =(times = 0, callback = null) => {
+          if (callback) {
+              for (let i = 1; i <= times; i++) {
+                  callback(i);
+              }
+          }
+        };
+        loop(5);//ничего нет
+        loop(5, (i) => console.log('ура работает!', i));
+    </script>
+<body>
+
+</body>
+</html>
