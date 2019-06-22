@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    flex-direction: row-reverse;
+    max-height: 98vh;
+    justify-content: space-around;
+}
+
+.gallery {
+    display: flex;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+a > img {
+	width: 200px;
+	margin: 5px;
+}
+
