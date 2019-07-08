@@ -1,0 +1,50 @@
+.good {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 270px;
+    border-radius: 30px 30px 10px 10px;
+	margin: 25px auto;
+    background: lemonchiffon;
+    box-shadow: 0 0 25px #777;
+	border: 1px solid transparent; 
+    position:relative;
+}
+
+#content {
+	display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    max-width: 1345px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.goodsName {
+	text-align:center;
+	font-size: 30px;
+    line-height: 50px;
+}
+
+.goodsParam {
+	margin: 0 auto;
+	padding: 0 10px 0 10px;
+	height: 50px;
+}
+
+.goodImg {
+	border-radius: 30px;
+	box-shadow: 0 0 25px #777;
+}
+
+.goodsWrap {
+	margin: 0 auto;
+}
+
+.goodsPrice {
+	height: 40px;
+    line-height: 40px;
+	padding: 0 20px 0 20px;
+	text-align:right;
+	color:red;
+}
