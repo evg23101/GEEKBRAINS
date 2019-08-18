@@ -4,6 +4,7 @@
 namespace app\models;
 
 
+use app\models\rules\StopListRules;
 use phpDocumentor\Reflection\Types\Self_;
 use yii\base\Model;
 
@@ -63,6 +64,8 @@ class Activity extends Model
 
     public $email;
 
+    public $file;
+
     public function beforeValidate()
     {
         $date=\DateTime::createFromFormat('d.m.Y',$this->startDay);
@@ -79,14 +82,24 @@ class Activity extends Model
             [['title','startDay'],'required'],
             [['startDay','endDay'],'string'],
             ['startDay','date', 'format'=>'php:Y-m-d'],
+            ['file','file','extensions'=>['jpg', 'png']],
             ['body','string','min' => 5,'max' => 150],
             [['isBlocked', 'useNotification'],'boolean'],
             ['repeatedType', 'in','range'=> array_keys(self::REPEATED_TYPE)],
             ['email','email'],
+      //      ['title','titleStopRule'],
+            ['title',StopListRules::class,'stopList' => ['шаурма','бордюр']],
             ['email','required','when'=> function($model){
                 return $model->useNotification?true:false;
             }]
         ];
+    }
+
+    public function titleStopRule($attr){
+        $arr=['шаурма','бордюр'];
+        if(in_array($this->title,$arr)){
+            $this->addError('title','Значение заголовка находится в стоп-листе');
+        }
     }
 
     public function attributeLabels()
@@ -97,9 +110,10 @@ class Activity extends Model
             'endDay' => 'Дата завершения',
             'idAuthor' => 'ID автора',
             'body' => 'Описание события',
-            'isBlocked' => 'Заблокировать',
+            'isBlocked' => 'Событие на целый день',
             'isRepeated'=>'Повторять',
-            'repeatedType'=>'Частота повтора'
+            'repeatedType'=>'Частота повтора',
+            'useNotification'=>'уведомлять по почте'
         ];
     }
 }

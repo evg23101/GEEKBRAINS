@@ -5,6 +5,7 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
+    'name' => 'Calendar',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'language' => 'ru-RU',
@@ -13,7 +14,10 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
-        'activity'=>['class'=>\app\components\ActivityComponent::class ],
+        'activity'=>[
+            'class'=>'\app\components\ActivityComponent',
+            'classModel'=>'app\models\Activity',
+            ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'QtX5mlFe308lLhG0aiJ6wHefPjAoeVN_',
