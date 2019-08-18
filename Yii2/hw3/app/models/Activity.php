@@ -108,7 +108,6 @@ class Activity extends Model
             'title' => 'Название события',
             'startDay' => 'Дата начала',
             'endDay' => 'Дата завершения',
-            'idAuthor' => 'ID автора',
             'body' => 'Описание события',
             'isBlocked' => 'Событие на целый день',
             'isRepeated'=>'Повторять',

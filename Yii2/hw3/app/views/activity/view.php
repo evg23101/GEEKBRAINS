@@ -1,8 +1,9 @@
 <?php
 /**
- * @var $model \app\models\Activity
+ * @var $model Activity
  */
-?>
+
+use app\models\Activity; ?>
 
 <div class="row">
     <div class="col-md-12">

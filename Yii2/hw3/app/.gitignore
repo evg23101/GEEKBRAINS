@@ -8,7 +8,7 @@ nbproject
 .buildpath
 .project
 .settings
-
+config/db_locale.php
 # windows thumbnail cache
 Thumbs.db
 

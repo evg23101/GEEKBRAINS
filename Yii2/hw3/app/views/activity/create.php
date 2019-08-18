@@ -19,7 +19,6 @@ use app\models\Activity;
                 <?=$form->field($model, 'endDay') -> input('date'); ?>
             </div>
         </div>
-        <?=$form->field($model, 'idAuthor'); ?>
         <?=$form->field($model, 'body') -> textarea(); ?>
         <div class="row">
             <div class="col-md-4">
