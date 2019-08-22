@@ -1,9 +1,9 @@
 <?php
 
 $params = require __DIR__ . '/params.php';
-$db = file_exists(__DIR__.'/db_locale.php')?
-    (require __DIR__.'/db_locale.php'):
-    (require __DIR__.'/db.php');
+$db = file_exists(__DIR__ . '/db_locale.php') ?
+    (require __DIR__ . '/db_locale.php') :
+    (require __DIR__ . '/db.php');
 
 $config = [
     'id' => 'basic',
@@ -13,13 +13,16 @@ $config = [
     'language' => 'ru-RU',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
-        'activity'=>[
-            'class'=>'\app\components\ActivityComponent',
-            'classModel'=>'app\models\Activity',
-            ],
+        'activity' => [
+            'class' => '\app\components\ActivityComponent',
+            'classModel' => 'app\models\Activity',
+        ],
+        'dao' => [
+            'class'=>\app\components\DaoComponent::class
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'QtX5mlFe308lLhG0aiJ6wHefPjAoeVN_',
