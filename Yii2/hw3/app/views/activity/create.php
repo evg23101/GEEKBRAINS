@@ -4,11 +4,11 @@
  */
 
 use app\models\Activity;
-
+$this->title = 'Новая активность';
 ?>
 <div class="row">
     <div class="col-md-12">
-        <h3>Создание активности</h3>
+        <h3>Создание активности (сегодня: <?=date('d.m.Y')?>)</h3>
         <?php     $form = \yii\bootstrap\ActiveForm::begin();  ?>
         <?=$form->field($model, 'title'); ?>
         <div class="row">

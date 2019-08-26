@@ -7,13 +7,19 @@ namespace app\controllers\actions;
 use app\models\Activity;
 use yii\base\Action;
 use yii\bootstrap\ActiveForm;
+use yii\web\HttpException;
 use yii\web\Response;
 
 class ActivityCreateAction extends Action
 {
     public function run()
     {
-        $model = new Activity();
+        if(!\Yii::$app->rbac->canCreateActivity()){
+            throw new HttpException(403,'Not Auth method');
+        }
+
+//        \Yii::$app->user->getIdentity();
+        $model = \Yii::$app->activity->getModel();
         if (\Yii::$app->request->isPost) {
             $model->load(\Yii::$app->request->post());
             if (\Yii::$app->request->isAjax){
@@ -21,7 +27,7 @@ class ActivityCreateAction extends Action
                 return ActiveForm::validate($model);
             }
             if (\Yii::$app->activity->createActivity($model)) {
-                return $this->controller->render( 'view',['model'=>$model]);
+                return $this->controller->redirect(['/activity/view','id'=>$model->id]);
             } else {
                 print_r($model->errors);
                 exit();

@@ -4,11 +4,12 @@
 namespace app\components;
 
 
+use app\base\BaseComponent;
 use yii\base\Component;
 use yii\db\Connection;
 use yii\db\Query;
 
-class DaoComponent extends Component
+class DaoComponent extends BaseComponent
 {
     public function getDB(): Connection
     {

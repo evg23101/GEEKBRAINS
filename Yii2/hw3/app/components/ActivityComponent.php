@@ -6,12 +6,13 @@ namespace app\components;
 
 
 
+use app\base\BaseComponent;
 use app\models\Activity;
 use yii\base\Component;
 use yii\helpers\FileHelper;
 use yii\web\UploadedFile;
 
-class ActivityComponent extends Component
+class ActivityComponent extends BaseComponent
 {
     public $classModel;
 
@@ -23,8 +24,8 @@ class ActivityComponent extends Component
     public function createActivity(Activity &$activity): bool
     {
         $activity->file=UploadedFile::getInstance($activity,'file');
-
-        if (!$activity->validate()){
+        $activity->user_id=\Yii::$app->user->getId();
+        if (!$activity->save()){
             return false;
         }
 

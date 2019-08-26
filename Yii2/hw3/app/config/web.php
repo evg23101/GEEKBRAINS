@@ -7,7 +7,7 @@ $db = file_exists(__DIR__ . '/db_locale.php') ?
 
 $config = [
     'id' => 'basic',
-    'name' => 'Calendar',
+    'name' => 'Календарь',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'language' => 'ru-RU',
@@ -16,10 +16,15 @@ $config = [
         '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
+        'authManager'=> [
+            'class'=>'yii\rbac\DbManager'
+        ],
+        'rbac'=>['class'=>\app\components\RbacComponent::class],
         'activity' => [
             'class' => '\app\components\ActivityComponent',
             'classModel' => 'app\models\Activity',
         ],
+        'auth'=>['class'=>\app\components\AuthComponent::class ],
         'dao' => [
             'class'=>\app\components\DaoComponent::class
         ],
@@ -31,7 +36,7 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
+            'identityClass' => 'app\models\Users',
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [

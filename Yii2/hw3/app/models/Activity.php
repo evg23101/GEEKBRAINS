@@ -8,50 +8,15 @@ use app\models\rules\StopListRules;
 use phpDocumentor\Reflection\Types\Self_;
 use yii\base\Model;
 
-class Activity extends Model
+class Activity extends ActivityBase
 {
-    /**
-     * Название события
-     *
-     * @var string
-     */
-    public $title;
 
-    /**
-     * День начала события. Хранится в Unix timestamp
-     *
-     * @var int
-     */
-    public $startDay;
-
-    /**
-     * День завершения события. Хранится в Unix timestamp
-     *
-     * @var int
-     */
-    public $endDay;
-
-    /**
-     * ID автора, создавшего события
-     *
-     * @var int
-     */
-    public $idAuthor;
-
-    /**
-     * Описание события
-     *
-     * @var string
-     */
-    public $body;
-
-    /**
-     * @var bool
-     */
-    public $isBlocked;
-
+//    public $title;
+//    public $startDay;
+//    public $endDay;
+//    public $body;
+//    public $isBlocked;
     public $isRepeated;
-
     public $repeatedType;
 
     public const REPEATED_TYPE = [
@@ -60,10 +25,8 @@ class Activity extends Model
         '3'=>'каждый месяц'
     ];
 
-    public $useNotification;
-
-    public $email;
-
+//    public $useNotification;
+//    public $email;
     public $file;
 
     public function beforeValidate()
@@ -77,7 +40,7 @@ class Activity extends Model
 
     public function rules()
     {
-        return [
+        return array_merge([
             ['title','trim'],
             [['title','startDay'],'required'],
             [['startDay','endDay'],'string'],
@@ -92,7 +55,7 @@ class Activity extends Model
             ['email','required','when'=> function($model){
                 return $model->useNotification?true:false;
             }]
-        ];
+        ],parent::rules());
     }
 
     public function titleStopRule($attr){
@@ -112,7 +75,8 @@ class Activity extends Model
             'isBlocked' => 'Событие на целый день',
             'isRepeated'=>'Повторять',
             'repeatedType'=>'Частота повтора',
-            'useNotification'=>'уведомлять по почте'
+            'useNotification'=>'Уведомлять по почте',
+            'file'=>'Файл для загрузки'
         ];
     }
 }

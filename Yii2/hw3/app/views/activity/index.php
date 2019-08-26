@@ -7,5 +7,5 @@
 <?php endif; ?>
 
 <h3><?=$model->getAttributeLabel('body') ?></h3>
-<div><?=$model->body ?></div>
+<div><?=$model->body;?></div>
 
