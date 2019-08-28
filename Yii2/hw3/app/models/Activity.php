@@ -4,9 +4,16 @@
 namespace app\models;
 
 
+use app\behaviors\GetDateCreatedBehavior;
 use app\models\rules\StopListRules;
 use phpDocumentor\Reflection\Types\Self_;
 use yii\base\Model;
+
+/**
+ * Class Activity
+ * @package app\models
+ * @mixin GetDateCreatedBehavior
+ */
 
 class Activity extends ActivityBase
 {
@@ -18,6 +25,15 @@ class Activity extends ActivityBase
 //    public $isBlocked;
     public $isRepeated;
     public $repeatedType;
+
+    const EVENT_MY_EVENT='my_event';
+
+    public function behaviors()
+    {
+        return [
+            ['class'=>GetDateCreatedBehavior::class,'attributeName' => 'createAt']
+        ];
+    }
 
     public const REPEATED_TYPE = [
         '1'=>'каждый день',
@@ -45,6 +61,10 @@ class Activity extends ActivityBase
             [['title','startDay'],'required'],
             [['startDay','endDay'],'string'],
             ['startDay','date', 'format'=>'php:Y-m-d'],
+            ['endDay', 'compare', 'compareAttribute' => 'startDay',
+                'operator' => '>=',
+                'message' => 'Событие не может закончиться раньше его начала'
+            ],
             ['file','file','extensions'=>['jpg', 'png']],
             ['body','string','min' => 5,'max' => 150],
             [['isBlocked', 'useNotification'],'boolean'],
