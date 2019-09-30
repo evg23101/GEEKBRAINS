@@ -57,4 +57,11 @@ class ActivityComponent extends BaseComponent
     {
         return time().'.'.$uploadedFile->extension;
     }
+
+    public function getActivityTodayUseNotification(): ?array
+    {
+        return Activity::find()->andWhere('startDay>=:date',[':date' => date('Y-m-d')])
+            ->andWhere(['useNotification'=>1])
+            ->andWhere('email is not null')->all();
+    }
 }

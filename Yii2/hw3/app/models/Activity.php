@@ -85,18 +85,23 @@ class Activity extends ActivityBase
         }
     }
 
-    public function attributeLabels()
+    public function fields()
     {
         return [
-            'title' => 'Название события',
-            'startDay' => 'Дата начала',
-            'endDay' => 'Дата завершения',
-            'body' => 'Описание события',
-            'isBlocked' => 'Событие на целый день',
-            'isRepeated'=>'Повторять',
-            'repeatedType'=>'Частота повтора',
-            'useNotification'=>'Уведомлять по почте',
-            'file'=>'Файл для загрузки'
+            'id',
+            'title',
+            'startDay',
+            'user_id'
+        ];
+    }
+
+    public function extraFields()
+    {
+        return [
+            'body',
+            'user_email'=>function($model){
+            return $model->user->email;
+            }
         ];
     }
 }

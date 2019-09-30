@@ -59,10 +59,13 @@ class ActivityBase extends \yii\db\ActiveRecord
             'body' => Yii::t('app', 'Body'),
             'isBlocked' => Yii::t('app', 'Is Blocked'),
             'useNotification' => Yii::t('app', 'Use Notification'),
+            'isRepeated' => Yii::t('app','Is Repeated'),
+            'repeatedType' => Yii::t('app','Repeated Type'),
             'email' => Yii::t('app', 'Email'),
             'createAt' => Yii::t('app', 'Create At'),
             'isDeleted' => Yii::t('app', 'Is Deleted'),
             'user_id' => Yii::t('app', 'User ID'),
+            'file' => Yii::t('app','File'),
         ];
     }
 

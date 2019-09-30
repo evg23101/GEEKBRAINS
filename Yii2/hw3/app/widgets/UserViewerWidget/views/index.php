@@ -1,9 +1,13 @@
 <?php
 
-/* @var $this \yii\web\View */
+/* @var $this */
 /* @var $users  */
+
+use \app\widgets\UserViewerWidget\assets\UserViewerAsset;
+use \yii\web\View;
+UserViewerAsset::register($this);
 ?>
-<strong>From widget
+<strong>Это виджет
 </strong>
 <pre>
     <?=print_r($users);?>

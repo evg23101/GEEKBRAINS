@@ -6,7 +6,7 @@
 /* @var $model \app\models\Users */
 $this->title = 'Регистрация';
 ?>
-
+<h1><?=$this->title?></h1>
 <div class="row">
     <div class="col-md-6">
         <?php $form=\yii\bootstrap\ActiveForm::begin()?>
